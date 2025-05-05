@@ -1,72 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
 header {
-  background-color: #ff7043;
-  color: white;
-  padding: 40px 20px;
+  background-color: #ffb347;
+  padding: 30px 0;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
+  margin: 0;
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
-main.recipes-grid {
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto 20px auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffb34750;
+}
+
+.recipes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
+  gap: 24px;
+  padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 .recipe-card {
-  background-color: white;
+  background: white;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .recipe-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-card h2 {
-  color: #d84315;
-  margin-bottom: 10px;
-}
-
-.recipe-card h3 {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #555;
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #ff7f50;
 }
 
 .recipe-card ul {
-  list-style: disc;
-  margin-left: 20px;
-  margin-top: 10px;
+  padding-left: 20px;
 }
 
-footer {
-  background-color: #333;
-  color: #eee;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+.recipe-card li {
+  margin-bottom: 6px;
 }
