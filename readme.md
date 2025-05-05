@@ -24,6 +24,8 @@ Cela vous permettra de valider la compétence suivante :
 
 ![App Screenshot](assets/images/capture_ecran.png)
 
-## 📦 Structure attendue
-
 # Recette-monde
+
+## Authors
+
+- [@bryanParisot](https://github.com/BryanParisot)
