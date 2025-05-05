@@ -20,6 +20,10 @@ Cela vous permettra de valider la compétence suivante :
 
 ---
 
+## maquette
+
+[assets/images/capture_ecran.png]
+
 ## 📦 Structure attendue
 
 # Recette-monde
