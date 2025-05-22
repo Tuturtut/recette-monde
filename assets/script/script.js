@@ -9,6 +9,7 @@ function renderRecettes(recipes) {
   const recipesContainer = document.getElementById("recipesContainer");
 
   // Create the article for each recipe
+  recipesContainer.innerHTML = "";
 
   recipes.forEach((element) => {
     console.log(element);
@@ -46,7 +47,18 @@ function renderRecettes(recipes) {
 
 async function main() {
   const recettes = await fetchRecettes();
+
+  let searchBarValue = document.getElementById("searchInput");
+
   renderRecettes(recettes);
+
+  searchBarValue.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    const filteredRecettes = recettes.filter((recette) =>
+      recette.name.toLowerCase().includes(value)
+    );
+    renderRecettes(filteredRecettes);
+  });
 }
 
 main();
