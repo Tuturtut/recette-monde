@@ -38,11 +38,19 @@ function renderRecettes(recipes) {
       }
     );
 
+    recipeDiv.addEventListener("click", () => {
+      renderRecettesDetails(element);
+    });
+
     recipeDiv.appendChild(ingredientList);
 
     // Add article to container
     recipesContainer.appendChild(recipeDiv);
   });
+}
+
+function renderRecettesDetails(recipe) {
+  console.log(recipe);
 }
 
 async function main() {
