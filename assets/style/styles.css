@@ -82,15 +82,38 @@ header h1 {
 #popup {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 50vw;
-  height: 50vh;
-  margin: 25vh 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrage parfait */
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto; /* Permet de scroller si contenu long */
+
   background-color: #ffb347;
-  border-radius: 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacement entre les éléments */
+}
+
+#closePopup {
+  align-self: flex-end;
+  background-color: #fff;
+  color: #ffb347;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+#closePopup:hover {
+  background-color: #ffe0b3;
 }
