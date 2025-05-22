@@ -51,7 +51,16 @@ function renderRecettes(recipes) {
 
 function renderRecettesDetails(recipe) {
   console.log(recipe);
+  let popup = document.getElementById("popup");
+  popup.style.display = "flex";
 }
+
+function closePopup() {
+  let popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
+
+document.getElementById("closePopup").addEventListener("click", closePopup);
 
 async function main() {
   const recettes = await fetchRecettes();

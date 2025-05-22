@@ -78,3 +78,19 @@ header h1 {
 .recipe-card li {
   margin-bottom: 6px;
 }
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh 25vw;
+  background-color: #ffb347;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
